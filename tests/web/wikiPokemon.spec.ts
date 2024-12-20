@@ -1,8 +1,8 @@
-import { test, expect } from '../tests/fixtures/encryptedKeyFixture';
-import { readExcel } from '../utils/readExcel';
+import { test, expect } from '../fixtures/encryptedKeyFixture';
+import { readExcel } from '../../utils/readExcel';
 import * as fs from 'fs';
 import * as path from 'path';
-import { WikipediaPage } from '../pages/WikipediaPage';
+import { WikipediaPage } from '../../pages/WikipediaPage';
 
 const testData = readExcel('./data/Datos-pruebas.xlsx'); // Carga los datos del Excel
 const imageFolder = './images'; // Carpeta para guardar las imágenes
@@ -17,7 +17,7 @@ test.describe('Wikipedia Pokémon Tests', () => {
   });
 
   for (const { name } of testData) {
-    test(`TEST - Validate Wikipedia page for Pokémon: ${name}`, async ({ page }) => {
+    test(`TEST - Validate Wikipedia page for Pokémon: ${name}`, async ({ page, encryptedKey }) => {
       const wikipediaPage = new WikipediaPage(page);
 
       // Navegar a la página del Pokémon

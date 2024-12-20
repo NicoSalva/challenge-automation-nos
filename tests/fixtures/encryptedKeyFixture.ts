@@ -1,7 +1,7 @@
 import { expect, test as baseTest } from '@playwright/test';
 import crypto from 'crypto';
 
-// Extendiendo el test base con el fixture `encryptedKey`
+// 
 const test = baseTest.extend<{ encryptedKey: string }>({
     encryptedKey: async ({}, use) => {
         const secretKey = process.env.SECRET_KEY || 'default-secret'; // Clave secreta desde variable de entorno
@@ -12,4 +12,3 @@ const test = baseTest.extend<{ encryptedKey: string }>({
 });
 
 export { test, expect };
-

@@ -1,4 +1,4 @@
-import { test, expect } from '../tests/fixtures/encryptedKeyFixture';
+import { test, expect } from '../fixtures/encryptedKeyFixture';
 
 test.describe('JSONPlaceholder API Tests', () => {
   const endpoint = 'https://jsonplaceholder.typicode.com/posts';
