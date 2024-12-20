@@ -27,7 +27,7 @@ Instalación de Playwright browsers:
 npx playwright install
 ```
 
-Set up your .env file: Create a .env file in the root of the project and add the following content:
+Configura tu archivo .env en la raiz del proyecto y agrega la siguiente key:
 ```
 SECRET_KEY=7b5880f7-a781-4b39-9ceb-f8e3bfbce32d
 ```
