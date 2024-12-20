@@ -1,5 +1,23 @@
-node_modules/
-.env
+# Logs
+*.log
+
+# Capturas de pantalla y videos de Playwright
+test-results/
+playwright-report/
+
+# Archivos de reportes generados
 allure-results/
 allure-report/
-test-results/
+
+# Archivos de imágenes descargadas durante las pruebas
+images/
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Node.js dependencies
+node_modules/
+
+# Archivos de configuración locales
+.env
